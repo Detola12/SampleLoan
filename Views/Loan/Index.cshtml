@@ -1,0 +1,28 @@
+@model TestLoan.Models.LoanDetailsViewModel
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loan Application</title>
+</head>
+<body>
+
+
+<form asp-action="Store" method="post">
+    <input type="hidden" asp-for="UserId" value="@ViewData["Id"]">
+    
+    <label asp-for="AmmountCollected"></label>
+    <input type="number" class="form-control" asp-for="AmmountCollected">
+
+    <label asp-for="Tenure"></label>
+    <input type="number" class="form-control" asp-for="Tenure">
+
+    <button type="submit" class="btn btn-secondary">Submit</button>
+</form>
+
+</body>
+</html>
